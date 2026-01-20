@@ -5,14 +5,33 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initAventuras();
     initTabs();
-    initForm();
+    initWhatsApp();
     initScrollAnimations();
+    initThumbnailFallback();
 });
 
 // Navegación suave y activa
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-menu a');
     const sections = document.querySelectorAll('section');
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Toggle menú móvil
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    // Cerrar menú móvil al hacer click en un enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 
     // Smooth scroll para navegación
     navLinks.forEach(link => {
@@ -126,128 +145,19 @@ function initTabs() {
 
 // Modal Functionality (removido - ya no se usa para el mapa)
 
-// Formulario de Patrocinio
-function initForm() {
-    const form = document.getElementById('patrocinio-form');
+// WhatsApp Integration
+function initWhatsApp() {
+    const whatsappButton = document.querySelector('.whatsapp-button');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function(e) {
+            // El enlace ya está configurado con el mensaje predefinido
+            showNotification('Abriendo WhatsApp...', 'success');
 
-        if (validateForm()) {
-            submitForm();
-        }
-    });
-
-    // Validación en tiempo real
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            validateField(this);
+            // Tracking opcional
+            console.log('WhatsApp click - Sugerencia para próximo video');
         });
-
-        input.addEventListener('input', function() {
-            clearFieldError(this);
-        });
-    });
-}
-
-function validateForm() {
-    let isValid = true;
-    const form = document.getElementById('patrocinio-form');
-    const inputs = form.querySelectorAll('input, textarea');
-
-    inputs.forEach(input => {
-        if (!validateField(input)) {
-            isValid = false;
-        }
-    });
-
-    return isValid;
-}
-
-function validateField(field) {
-    const value = field.value.trim();
-    const fieldName = field.name;
-    let isValid = true;
-    let errorMessage = '';
-
-    // Limpiar errores previos
-    clearFieldError(field);
-
-    // Validaciones específicas
-    switch (fieldName) {
-        case 'nombre':
-        case 'empresa':
-            if (value.length < 2) {
-                isValid = false;
-                errorMessage = 'Este campo debe tener al menos 2 caracteres';
-            }
-            break;
-        case 'email':
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(value)) {
-                isValid = false;
-                errorMessage = 'Por favor ingresa un email válido';
-            }
-            break;
-        case 'propuesta':
-            if (value.length < 10) {
-                isValid = false;
-                errorMessage = 'La propuesta debe tener al menos 10 caracteres';
-            }
-            break;
     }
-
-    // Mostrar error si no es válido
-    if (!isValid) {
-        showFieldError(field, errorMessage);
-    }
-
-    return isValid;
-}
-
-function showFieldError(field, message) {
-    field.style.borderColor = 'var(--accent-red)';
-    field.style.boxShadow = '0 0 0 3px rgba(206, 17, 38, 0.1)';
-
-    let errorElement = field.parentNode.querySelector('.error-message');
-    if (!errorElement) {
-        errorElement = document.createElement('div');
-        errorElement.className = 'error-message';
-        field.parentNode.appendChild(errorElement);
-    }
-    errorElement.textContent = message;
-}
-
-function clearFieldError(field) {
-    field.style.borderColor = 'var(--border-color)';
-    field.style.boxShadow = 'none';
-
-    const errorElement = field.parentNode.querySelector('.error-message');
-    if (errorElement) {
-        errorElement.remove();
-    }
-}
-
-function submitForm() {
-    const form = document.getElementById('patrocinio-form');
-    const submitButton = form.querySelector('.submit-button');
-
-    // Mostrar loading state
-    submitButton.classList.add('loading');
-    submitButton.textContent = 'Enviando...';
-
-    // Simular envío (en producción esto sería una llamada a API)
-    setTimeout(() => {
-        submitButton.classList.remove('loading');
-        submitButton.textContent = 'Enviar Propuesta';
-
-        // Mostrar mensaje de éxito
-        showNotification('¡Gracias por tu interés! Me pondré en contacto contigo pronto.', 'success');
-
-        // Limpiar formulario
-        form.reset();
-    }, 2000);
 }
 
 // Animaciones de Scroll
@@ -414,6 +324,36 @@ function initAccessibility() {
     });
 }
 
+// Mejorar carga de miniaturas de YouTube
+function initThumbnailFallback() {
+    const thumbnails = document.querySelectorAll('.aventura-image img');
+
+    thumbnails.forEach(img => {
+        img.addEventListener('error', function() {
+            // Si maxresdefault falla, intentar hqdefault
+            if (this.src.includes('maxresdefault.jpg')) {
+                const videoId = this.src.split('/vi/')[1].split('/')[0];
+                this.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+            }
+            // Si hqdefault también falla, intentar mqdefault
+            else if (this.src.includes('hqdefault.jpg')) {
+                const videoId = this.src.split('/vi/')[1].split('/')[0];
+                this.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+            }
+        });
+
+        // Agregar timeout para detectar imágenes que no cargan
+        setTimeout(() => {
+            if (!img.complete || img.naturalHeight === 0) {
+                const videoId = img.src.split('/vi/')[1]?.split('/')[0];
+                if (videoId) {
+                    img.src = `https://img.youtube.com/vi/${videoId}/default.jpg`;
+                }
+            }
+        }, 3000);
+    });
+}
+
 // Inicializar mejoras de accesibilidad
 initAccessibility();
 
@@ -426,7 +366,7 @@ function initPerformanceMonitoring() {
     });
 
     // Monitorear interacciones
-    const interactiveElements = document.querySelectorAll('button, a, .departamento');
+    const interactiveElements = document.querySelectorAll('button, a');
     interactiveElements.forEach(element => {
         element.addEventListener('click', function() {
             // Aquí se podría enviar analytics

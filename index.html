@@ -15,14 +15,20 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
+                <img src="/assets/images/logo-placeholder.png" alt="Logo Paseando con Genarin" class="nav-logo">
                 <h1>Paseando con Genarin</h1>
             </div>
-            <div class="nav-menu">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
                 <a href="#hero">Inicio</a>
                 <a href="#aventuras">Aventuras</a>
                 <a href="#videos">Videos</a>
                 <a href="#biografia">Biografía</a>
-                <a href="#patrocinio">Patrocinio</a>
+                <a href="#colaboremos">Sugerencias</a>
             </div>
         </nav>
     </header>
@@ -33,7 +39,7 @@
         <div class="hero-content">
             <h2 class="hero-title">Descubre Colombia y el Mundo a Través de Mis Ojos</h2>
             <p class="hero-subtitle">Viajes únicos, historias inspiradoras y aventuras inolvidables</p>
-            <a href="https://youtube.com/@genarin" target="_blank" class="cta-button">Suscribirte al Canal</a>
+            <a href="https://www.youtube.com/channel/UC6ejIvuNm0GESy43wa5rAfw" target="_blank" class="cta-button">Suscribirte al Canal</a>
         </div>
     </section>
 
@@ -44,36 +50,9 @@
             <p class="section-description">Descubre mis viajes más emocionantes por Colombia y el mundo</p>
             <div class="aventuras-grid">
                 <!-- Video Destacado 1 -->
-                <div class="aventura-card featured">
-                    <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Video Destacado" onerror="this.src='https://via.placeholder.com/600x340/2D5A3D/FFFFFF?text=Aventura+Destacada'">
-                        <div class="play-overlay">
-                            <div class="play-button">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="white">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="featured-badge">⭐ Destacado</div>
-                    </div>
-                    <div class="aventura-content">
-                        <div class="aventura-category">Colombia</div>
-                        <h3 class="aventura-title">Magia en el Valle del Cocora</h3>
-                        <p class="aventura-description">Un viaje inolvidable por el eje cafetero colombiano, explorando los bosques de palmas de cera más altos del mundo.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 12 min</span>
-                            <span class="views">👁️ 15K vistas</span>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
-                            Ver Aventura Completa →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Video Destacado 2 -->
                 <div class="aventura-card">
                     <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Aventura en la Costa" onerror="this.src='https://via.placeholder.com/400x225/8B7355/FFFFFF?text=Costa+Caribe'">
+                        <img src="https://img.youtube.com/vi/E5uOY8fIgN8/maxresdefault.jpg" alt="Pamplona Norte de Santander" onerror="this.src='https://img.youtube.com/vi/E5uOY8fIgN8/hqdefault.jpg'" onload="this.onerror=null">
                         <div class="play-overlay">
                             <div class="play-button">
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -84,13 +63,31 @@
                     </div>
                     <div class="aventura-content">
                         <div class="aventura-category">Colombia</div>
-                        <h4 class="aventura-title">Cartagena: Ciudad Amurallada</h4>
-                        <p class="aventura-description">Explorando la historia y cultura de la hermosa Cartagena de Indias.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 8 min</span>
-                            <span class="views">👁️ 8.2K vistas</span>
+                        <h4 class="aventura-title">Pamplona Norte de Santander</h4>
+                        <p class="aventura-description">Explorando la hermosa ciudad de Pamplona y sus alrededores en Norte de Santander.</p>
+                        <a href="https://www.youtube.com/watch?v=E5uOY8fIgN8" target="_blank" class="aventura-link">
+                            Ver Video →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video Destacado 2 -->
+                <div class="aventura-card">
+                    <div class="aventura-image">
+                        <img src="https://img.youtube.com/vi/gpBjeu7dFnM/maxresdefault.jpg" alt="Parque Nacional Natural Chingaza" onerror="this.src='https://img.youtube.com/vi/gpBjeu7dFnM/hqdefault.jpg'" onload="this.onerror=null">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
+                    </div>
+                    <div class="aventura-content">
+                        <div class="aventura-category">Colombia</div>
+                        <h4 class="aventura-title">Parque Nacional Natural Chingaza</h4>
+                        <p class="aventura-description">Una aventura inolvidable por el majestuoso Parque Nacional Natural Chingaza.</p>
+                        <a href="https://www.youtube.com/watch?v=gpBjeu7dFnM" target="_blank" class="aventura-link">
                             Ver Video →
                         </a>
                     </div>
@@ -99,7 +96,7 @@
                 <!-- Video Destacado 3 -->
                 <div class="aventura-card">
                     <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Aventura en la Sierra" onerror="this.src='https://via.placeholder.com/400x225/FFD700/2D5A3D?text=Sierra+Nevada'">
+                        <img src="https://img.youtube.com/vi/vHw5_36XjpU/maxresdefault.jpg" alt="Cartagena de Indias" onerror="this.src='https://img.youtube.com/vi/vHw5_36XjpU/hqdefault.jpg'" onload="this.onerror=null">
                         <div class="play-overlay">
                             <div class="play-button">
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -110,13 +107,9 @@
                     </div>
                     <div class="aventura-content">
                         <div class="aventura-category">Colombia</div>
-                        <h4 class="aventura-title">Pico del Águila - Sierra Nevada</h4>
-                        <p class="aventura-description">Ascenso desafiante a uno de los picos más altos de Colombia.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 15 min</span>
-                            <span class="views">👁️ 12K vistas</span>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
+                        <h4 class="aventura-title">Cartagena de Indias</h4>
+                        <p class="aventura-description">Explorando la historia y cultura de la hermosa Cartagena de Indias.</p>
+                        <a href="https://www.youtube.com/watch?v=vHw5_36XjpU" target="_blank" class="aventura-link">
                             Ver Video →
                         </a>
                     </div>
@@ -125,33 +118,7 @@
                 <!-- Video Destacado 4 -->
                 <div class="aventura-card">
                     <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Aventura Internacional" onerror="this.src='https://via.placeholder.com/400x225/CE1126/FFFFFF?text=Machu+Picchu'">
-                        <div class="play-overlay">
-                            <div class="play-button">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aventura-content">
-                        <div class="aventura-category">Internacional</div>
-                        <h4 class="aventura-title">Machu Picchu: La Ciudad Perdida</h4>
-                        <p class="aventura-description">Una aventura inolvidable por las ruinas incas más famosas del mundo.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 18 min</span>
-                            <span class="views">👁️ 25K vistas</span>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
-                            Ver Video →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Video Destacado 5 -->
-                <div class="aventura-card">
-                    <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Aventura en la Amazonia" onerror="this.src='https://via.placeholder.com/400x225/0033A0/FFFFFF?text=Amazonas'">
+                        <img src="https://img.youtube.com/vi/DCoVz_nYGXE/maxresdefault.jpg" alt="Salento y el Valle del Cocora" onerror="this.src='https://img.youtube.com/vi/DCoVz_nYGXE/hqdefault.jpg'" onload="this.onerror=null">
                         <div class="play-overlay">
                             <div class="play-button">
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -162,22 +129,18 @@
                     </div>
                     <div class="aventura-content">
                         <div class="aventura-category">Colombia</div>
-                        <h4 class="aventura-title">Encuentro con la Amazonia</h4>
-                        <p class="aventura-description">Inmersión en la selva amazónica colombiana, hogar de miles de especies.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 14 min</span>
-                            <span class="views">👁️ 18K vistas</span>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
+                        <h4 class="aventura-title">Salento y el Valle del Cocora</h4>
+                        <p class="aventura-description">Viaje al corazón del eje cafetero colombiano, hogar de las palmas de cera.</p>
+                        <a href="https://www.youtube.com/watch?v=DCoVz_nYGXE" target="_blank" class="aventura-link">
                             Ver Video →
                         </a>
                     </div>
                 </div>
 
-                <!-- Video Destacado 6 -->
+                <!-- Video Destacado 5 -->
                 <div class="aventura-card">
                     <div class="aventura-image">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Aventura en Patagonia" onerror="this.src='https://via.placeholder.com/400x225/2D5A3D/FFD700?text=Patagonia'">
+                        <img src="https://img.youtube.com/vi/OScd-6i-xWU/maxresdefault.jpg" alt="Café de Colombia" onerror="this.src='https://img.youtube.com/vi/OScd-6i-xWU/hqdefault.jpg'" onload="this.onerror=null">
                         <div class="play-overlay">
                             <div class="play-button">
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
@@ -187,14 +150,32 @@
                         </div>
                     </div>
                     <div class="aventura-content">
-                        <div class="aventura-category">Internacional</div>
-                        <h4 class="aventura-title">Torres del Paine - Chile</h4>
-                        <p class="aventura-description">Explorando uno de los parques nacionales más espectaculares del mundo.</p>
-                        <div class="aventura-meta">
-                            <span class="duration">⏱️ 16 min</span>
-                            <span class="views">👁️ 22K vistas</span>
+                        <div class="aventura-category">Colombia</div>
+                        <h4 class="aventura-title">Café de Colombia</h4>
+                        <p class="aventura-description">Descubriendo el mundo del café colombiano, desde las fincas hasta la taza.</p>
+                        <a href="https://youtu.be/OScd-6i-xWU" target="_blank" class="aventura-link">
+                            Ver Video →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video Destacado 6 -->
+                <div class="aventura-card">
+                    <div class="aventura-image">
+                        <img src="https://img.youtube.com/vi/BkBcdNyEo4g/maxresdefault.jpg" alt="Ciudad Perdida" onerror="this.src='https://img.youtube.com/vi/BkBcdNyEo4g/hqdefault.jpg'" onload="this.onerror=null">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="aventura-link">
+                    </div>
+                    <div class="aventura-content">
+                        <div class="aventura-category">Colombia</div>
+                        <h4 class="aventura-title">Ciudad Perdida</h4>
+                        <p class="aventura-description">La mítica Ciudad Perdida de los Tayrona, un viaje al corazón de la Sierra Nevada.</p>
+                        <a href="https://www.youtube.com/watch?v=BkBcdNyEo4g" target="_blank" class="aventura-link">
                             Ver Video →
                         </a>
                     </div>
@@ -202,7 +183,7 @@
             </div>
 
             <div class="ver-mas-container">
-                <a href="https://www.youtube.com/@paseandocongenarin" target="_blank" class="ver-mas-button">
+                <a href="https://www.youtube.com/channel/UC6ejIvuNm0GESy43wa5rAfw" target="_blank" class="ver-mas-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4-5h-2V7h2v5zm4-3h-2V7h2v2zm2 9h-2v-7h2v7z"/>
                     </svg>
@@ -224,39 +205,47 @@
                 <div id="colombia-tab" class="tab-content active">
                     <div class="videos-grid">
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example1" title="Video Colombia 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <h4>Café de Colombia</h4>
+                            <iframe src="https://www.youtube.com/embed/E5uOY8fIgN8" title="Video Colombia 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            <h4>Pamplona Norte de Santander</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example2" title="Video Colombia 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/gpBjeu7dFnM" title="Video Colombia 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Parque Nacional Natural Chingaza</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example3" title="Video Colombia 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/vHw5_36XjpU" title="Video Colombia 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Cartagena de Indias</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example4" title="Video Colombia 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/DCoVz_nYGXE" title="Video Colombia 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Salento y el Valle del Cocora</h4>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/OScd-6i-xWU" title="Video Colombia 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            <h4>Café de Colombia</h4>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/BkBcdNyEo4g" title="Video Colombia 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            <h4>Ciudad Perdida</h4>
                         </div>
                     </div>
                 </div>
                 <div id="mundo-tab" class="tab-content">
                     <div class="videos-grid">
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example5" title="Video Mundo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/_8xGuUdBTBc" title="Video Mundo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Patagonia Argentina</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example6" title="Video Mundo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/mOW0VRGk14Q" title="Video Mundo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Machu Picchu, Perú</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example7" title="Video Mundo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/Ea1ZaWFXlSU" title="Video Mundo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Torres del Paine, Chile</h4>
                         </div>
                         <div class="video-card">
-                            <iframe src="https://www.youtube.com/embed/example8" title="Video Mundo 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/z87W8f9p1iE" title="Video Mundo 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             <h4>Roraima, Venezuela</h4>
                         </div>
                     </div>
@@ -270,7 +259,7 @@
         <div class="container">
             <div class="biografia-content">
                 <div class="biografia-image">
-                    <img src="assets/images/genarin-profile.jpg" alt="Genarin - Viajero y Creador de Contenido" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUI5QkE0IiBmb250LXNpemU9IjE0Ij5HZW5hcmluPC90ZXh0Pgo8L3N2Zz4='">
+                    <img src="https://yt3.googleusercontent.com/fNLrABxEuIrHMb0QlJk3fNo-C14cnM2Si0s1wTYbgkcvSYS-n4_TpzF2FU5UG4tU3Cf76h2ccg=s160-c-k-c0x00ffffff-no-rj" alt="Genarin - Viajero y Creador de Contenido" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUI5QkE0IiBmb250LXNpemU9IjE0Ij5HZW5hcmluPC90ZXh0Pgo8L3N2Zz4='">
                 </div>
                 <div class="biografia-text">
                     <h2 class="section-title">Mi Historia</h2>
@@ -289,45 +278,47 @@
                     <blockquote class="biografia-quote">
                         "Viajar no es solo ver lugares nuevos, es ver el mundo con ojos nuevos"
                     </blockquote>
+
+                    <!-- Sección de Sharon -->
+                    <div class="sharon-section">
+                        <h3 class="sharon-title">Mi Compañera de Aventuras: Sharon</h3>
+                        <div class="sharon-content">
+                            <img src="assets/images/sharon.jpg" alt="Sharon - La mascota de Genarin" class="sharon-image" onerror="this.src='https://via.placeholder.com/200x200/E8F5E8/2D5A3D?text=Sharon'">
+                            <div class="sharon-text">
+                                <p class="sharon-description">
+                                    Sharon es mi fiel compañera de viajes, una hermosa perrita que me acompaña en todas mis aventuras.
+                                    Su energía y curiosidad infinita hacen que cada viaje sea aún más especial.
+                                </p>
+                                <p class="sharon-description">
+                                    Juntas hemos recorrido ríos, montañas y playas, creando recuerdos inolvidables que compartimos
+                                    con todos nuestros seguidores.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Patrocinio -->
-    <section id="patrocinio" class="patrocinio-section">
+    <!-- Sección de Colaboremos -->
+    <section id="colaboremos" class="colaboremos-section">
         <div class="container">
-            <h2 class="section-title">Colaboremos Juntos</h2>
-            <p class="section-description">¿Interesado en patrocinar mis aventuras? Me encantaría trabajar contigo</p>
-            <div class="patrocinio-content">
-                <div class="patrocinio-info">
-                    <h3>¿Por qué colaborar conmigo?</h3>
-                    <ul>
-                        <li>Contenido auténtico y de calidad</li>
-                        <li>Audiencia apasionada por los viajes</li>
-                        <li>Alcance nacional e internacional</li>
-                        <li>Historias que conectan con la gente</li>
-                    </ul>
-                </div>
-                <form id="patrocinio-form" class="patrocinio-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="empresa">Empresa *</label>
-                        <input type="text" id="empresa" name="empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="propuesta">Propuesta de Colaboración *</label>
-                        <textarea id="propuesta" name="propuesta" rows="5" required placeholder="Cuéntame sobre tu idea de colaboración..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Enviar Propuesta</button>
-                </form>
+            <h2 class="section-title">Mensaje que quiere enviar para el próximo vídeo</h2>
+            <p class="section-description">Lo tendremos en cuenta para el próximo vídeo, te nombraremos y te mandaremos saludos</p>
+            <div class="colaboremos-content">
+                <p class="colaboremos-text">
+                    Si tienes una sugerencia, un lugar que te gustaría que visite, o simplemente quieres aparecer en uno de mis próximos vídeos,
+                    ¡házmelo saber! Me encantaría incluir tus ideas en mis aventuras por Colombia y el mundo.
+                </p>
+                <a href="https://wa.me/573102991286?text=Hola%20Genarín,%20tengo%20una%20sugerencia%20para%20tu%20próximo%20vídeo"
+                   target="_blank"
+                   class="whatsapp-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                    </svg>
+                    Enviar Mensaje por WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -343,23 +334,17 @@
                 <div class="footer-social">
                     <h4>Sígueme en:</h4>
                     <div class="social-links">
-                        <a href="https://youtube.com/@genarin" target="_blank" class="social-link youtube">
+                        <a href="https://www.youtube.com/channel/UC6ejIvuNm0GESy43wa5rAfw" target="_blank" class="social-link youtube">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                             </svg>
                             YouTube
                         </a>
-                        <a href="https://instagram.com/genarin" target="_blank" class="social-link instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                            Instagram
-                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Paseando con Genarin. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Paseando con Genarin. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

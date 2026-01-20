@@ -50,11 +50,52 @@ body {
     margin: 0 auto;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .nav-brand h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    margin: 0;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .nav-menu {
@@ -100,7 +141,7 @@ body {
 .hero {
     height: 100vh;
     background-image: linear-gradient(rgba(45, 90, 61, 0.7), rgba(139, 115, 85, 0.7)),
-                      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+                      url('https://i.ytimg.com/vi/kclNKCtoYOs/hqdefault.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -359,19 +400,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.aventura-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.aventura-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
+/* Sección de meta eliminada - ya no se usa */
 
 .aventura-link {
     display: inline-flex;
@@ -625,96 +654,135 @@ section {
     margin-top: 2rem;
 }
 
-/* Sección de Patrocinio */
-.patrocinio-section {
-    background: white;
-}
-
-.patrocinio-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-}
-
-.patrocinio-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.patrocinio-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.patrocinio-info li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-secondary);
-}
-
-.patrocinio-info li::before {
-    content: '✓';
-    color: var(--accent-yellow);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-.patrocinio-form {
-    background: var(--bg-secondary);
+/* Sección de Sharon */
+.sharon-section {
+    margin-top: 3rem;
     padding: 2rem;
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(45, 90, 61, 0.1));
+    border-radius: 15px;
+    border: 1px solid rgba(139, 115, 85, 0.2);
+}
+
+.sharon-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sharon-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sharon-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    border: 4px solid var(--accent-yellow);
+}
+
+.sharon-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sharon-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Sección de Sharon */
+.sharon-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-yellow);
+}
+
+.sharon-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sharon-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sharon-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: var(--shadow);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.sharon-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
+.sharon-description {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
+/* Sección de Colaboremos */
+.colaboremos-section {
+    background: white;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 3px rgba(0, 51, 160, 0.1);
+.colaboremos-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.submit-button {
-    width: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+.colaboremos-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #25D366;
     color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
+    font-size: 1.1rem;
     transition: var(--transition);
+    box-shadow: var(--shadow);
+    margin: 0 auto;
 }
 
-.submit-button:hover {
-    transform: translateY(-2px);
+.whatsapp-button:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
+    background: #128C7E;
 }
 
 /* Footer */
@@ -775,22 +843,81 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
-        padding: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-brand {
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        z-index: 1001;
     }
 
     .nav-menu {
-        margin-top: 1rem;
-        gap: 1rem;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        width: 250px;
+        text-align: center;
+        border-radius: 15px;
+        transition: var(--transition);
+        background: rgba(45, 90, 61, 0.05);
+        border: 1px solid rgba(45, 90, 61, 0.1);
+    }
+
+    .nav-menu a:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: scale(1.05);
     }
 
     .hero {
-        height: 80vh;
+        height: 70vh;
         background-attachment: scroll;
     }
 
     .hero-content {
         padding: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
     }
 
     .biografia-content {
@@ -799,23 +926,38 @@ section {
         text-align: center;
     }
 
-    .patrocinio-content {
+    .sharon-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
     }
 
-    .social-links {
-        justify-content: center;
+    .sharon-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
     }
 
-    .mapa-container {
+    .colaboremos-content {
         padding: 1rem;
+    }
+
+    .colaboremos-text {
+        font-size: 1rem;
+    }
+
+    .whatsapp-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .aventura-meta {
+        display: none;
+    }
+
+    .aventuras-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .videos-grid {
@@ -831,6 +973,25 @@ section {
     .tab-button {
         width: 100%;
         max-width: 200px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .colaboremos-content {
+        padding: 0 1rem;
+    }
+
+    .whatsapp-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
