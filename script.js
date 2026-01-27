@@ -3,7 +3,7 @@
 // Traducciones
 const translations = {
     es: {
-        heroTitle: "Descubre Colombia y el Mundo a Través de Mis Ojos",
+        heroTitle: "Descubre el Mundo a Través de Mis Ojos",
         heroSubtitle: "Viajes únicos, historias inspiradoras y aventuras inolvidables",
         subscribeButton: "Suscribirte al Canal",
         adventuresTitle: "Aventuras Destacadas",
@@ -17,10 +17,9 @@ const translations = {
         biographyText5: "Mi motivación es simple: compartir la belleza de Colombia y del mundo con quienes siguen mis aventuras.",
         biographyText6: "Creo que los viajes nos hacen mejores personas, más empáticos y conscientes del mundo que nos rodea.",
         biographyQuote: "\"Viajar no es solo ver lugares nuevos, es ver el mundo con ojos nuevos\"",
-        sharonTitle: "Mi Compañera de Aventuras: Sharon",
-        sharonText1: "Sharon es mi fiel compañera de viajes, una hermosa perrita que me acompaña en todas mis aventuras.",
-        sharonText2: "Su energía y curiosidad infinita hacen que cada viaje sea aún más especial.",
-        sharonText3: "Juntas hemos recorrido ríos, montañas y playas, creando recuerdos inolvidables que compartimos con todos nuestros seguidores.",
+        sharonTitle: "Mi Compañero de Aventuras: Shadow",
+        sharonText1: "Shadow es mi fiel compañero de viajes, un hermoso perrito que me acompaña en todas mis aventuras. Su energía y curiosidad infinita hacen que cada viaje sea aún más especial.",
+        sharonText2: "Juntos hemos recorrido ríos, montañas y playas, creando recuerdos inolvidables que compartimos con todos nuestros seguidores.",
         suggestionsTitle: "Mensaje que quiere enviar para el próximo vídeo",
         suggestionsDescription: "Lo tendremos en cuenta para el próximo vídeo, te nombraremos y te mandaremos saludos",
         suggestionsText: "Si tienes una sugerencia, un lugar que te gustaría que visite, o simplemente quieres aparecer en uno de mis próximos vídeos, ¡házmelo saber! Me encantaría incluir tus ideas en mis aventuras por Colombia y el mundo.",
@@ -36,7 +35,7 @@ const translations = {
         navSuggestions: "Sugerencias"
     },
     en: {
-        heroTitle: "Discover Colombia and the World Through My Eyes",
+        heroTitle: "Discover the World Through My Eyes",
         heroSubtitle: "Unique travels, inspiring stories and unforgettable adventures",
         subscribeButton: "Subscribe to the Channel",
         adventuresTitle: "Featured Adventures",
@@ -511,15 +510,14 @@ function initLanguageSelector() {
         }
         if (bioQuote) bioQuote.textContent = trans.biographyQuote;
 
-        // Sharon section
+        // Shadow section
         const sharonTitle = document.querySelector('.sharon-title');
         const sharonTexts = document.querySelectorAll('.sharon-description');
 
         if (sharonTitle) sharonTitle.textContent = trans.sharonTitle;
-        if (sharonTexts.length >= 3) {
+        if (sharonTexts.length >= 2) {
             sharonTexts[0].textContent = trans.sharonText1;
             sharonTexts[1].textContent = trans.sharonText2;
-            sharonTexts[2].textContent = trans.sharonText3;
         }
 
         // Suggestions section
