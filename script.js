@@ -10,13 +10,17 @@ const translations = {
         adventuresDescription: "Descubre mis viajes más emocionantes por Colombia y el mundo",
         videosTitle: "Colombia & El Mundo",
         biographyTitle: "Mi Historia",
-        biographyText1: "Soy Genarin, un apasionado viajero colombiano que decidió transformar su amor por los viajes en una forma de vida.",
-        biographyText2: "Desde niño, soñaba con explorar cada rincón de mi país y, eventualmente, el mundo entero.",
-        biographyText3: "Mi viaje comenzó en las montañas de Antioquia, donde aprendí a apreciar la diversidad natural de Colombia.",
-        biographyText4: "Cada departamento que visito me enseña algo nuevo sobre nuestra cultura, historia y gente maravillosa.",
-        biographyText5: "Mi motivación es simple: compartir la belleza de Colombia y del mundo con quienes siguen mis aventuras.",
-        biographyText6: "Creo que los viajes nos hacen mejores personas, más empáticos y conscientes del mundo que nos rodea.",
-        biographyQuote: "\"Viajar no es solo ver lugares nuevos, es ver el mundo con ojos nuevos\"",
+        biographyText1: "Soy Genarín, un apasionado viajero que decidió transformar su amor por las rutas en una forma de vida. Desde niño, soñaba con explorar cada rincón que se me antojara y, eventualmente, el mundo entero.",
+        biographyText2: "Mi sueño comenzó observando las montañas de Salazar de las Palmas, Norte de Santander, donde aprendí a apreciar la naturaleza. Cada lugar que visito me enseña algo nuevo sobre nuestra cultura, nuestra historia y nuestra gente maravillosa.",
+        biographyText3: "Mi motivación es simple: compartir la belleza de los lugares por donde paso y mostrársela a quienes me siguen. Creo que los viajes nos hacen mejores personas: más empáticas y conscientes del mundo que nos rodea.",
+        biographyText4: "",
+        biographyText5: "",
+        biographyText6: "",
+        biographyQuote: "\"Viajar no es solo ver lugares nuevos, es ver el mundo desde otra perspectiva\"",
+        verVideo: "Ver Video →",
+        verTodasAventuras: "Ver Todas las Aventuras en YouTube",
+        tabColombia: "Colombia",
+        tabMundo: "El Mundo",
         sharonTitle: "Mi Compañero de Aventuras: Shadow",
         sharonText1: "Shadow es mi fiel compañero de viajes, un hermoso perrito que me acompaña en todas mis aventuras. Su energía y curiosidad infinita hacen que cada viaje sea aún más especial.",
         sharonText2: "Juntos hemos recorrido ríos, montañas y playas, creando recuerdos inolvidables que compartimos con todos nuestros seguidores.",
@@ -32,7 +36,34 @@ const translations = {
         navAdventures: "Aventuras",
         navVideos: "Videos",
         navBiography: "Biografía",
-        navSuggestions: "Sugerencias"
+        navSuggestions: "Sugerencias",
+        categoryColombia: "Colombia",
+        aventuras: [
+            {
+                title: "Pamplona, Norte de Santander | Historia, tradición y vistas inolvidables",
+                description: "Explorando la hermosa ciudad de Pamplona y sus alrededores en Norte de Santander."
+            },
+            {
+                title: "Curití, Santander | El pueblo artesanal que enamora",
+                description: "Una aventura inolvidable por el majestuoso Parque Nacional Natural Chingaza."
+            },
+            {
+                title: "Ferias de Salazar de las Palmas | Tradición, fiesta y cultura viva",
+                description: "Explorando la historia y cultura de la hermosa Cartagena de Indias."
+            },
+            {
+                title: "San Gil, Santander | Aventura, sonrisas y corazón turístico",
+                description: "Viaje al corazón del eje cafetero colombiano, hogar de las palmas de cera."
+            },
+            {
+                title: "El Socorro, Santander | Historia colonial y esencia santandereana",
+                description: "Descubriendo el mundo del café colombiano, desde las fincas hasta la taza."
+            },
+            {
+                title: "Cúcuta, Norte de Santander | Frontera, cultura y vida urbana",
+                description: "La mítica Ciudad Perdida de los Tayrona, un viaje al corazón de la Sierra Nevada."
+            }
+        ]
     },
     en: {
         heroTitle: "Discover the World Through My Eyes",
@@ -42,17 +73,20 @@ const translations = {
         adventuresDescription: "Discover my most exciting trips through Colombia and the world",
         videosTitle: "Colombia & The World",
         biographyTitle: "My Story",
-        biographyText1: "I am Genarin, a passionate Colombian traveler who decided to transform my love for travel into a way of life.",
-        biographyText2: "Since childhood, I dreamed of exploring every corner of my country and eventually the entire world.",
-        biographyText3: "My journey began in the mountains of Antioquia, where I learned to appreciate Colombia's natural diversity.",
-        biographyText4: "Each department I visit teaches me something new about our culture, history and wonderful people.",
-        biographyText5: "My motivation is simple: to share the beauty of Colombia and the world with those who follow my adventures.",
-        biographyText6: "I believe that travel makes us better people, more empathetic and aware of the world around us.",
-        biographyQuote: "\"Traveling is not just seeing new places, it is seeing the world with new eyes\"",
-        sharonTitle: "My Travel Companion: Sharon",
-        sharonText1: "Sharon is my faithful travel companion, a beautiful dog who accompanies me on all my adventures.",
-        sharonText2: "Her infinite energy and curiosity make every trip even more special.",
-        sharonText3: "Together we have traveled rivers, mountains and beaches, creating unforgettable memories that we share with all our followers.",
+        biographyText1: "I am Genarín, a passionate traveler who decided to transform my love for routes into a way of life. Since childhood, I dreamed of exploring every corner that caught my fancy and, eventually, the entire world.",
+        biographyText2: "My dream began observing the mountains of Salazar de las Palmas, Norte de Santander, where I learned to appreciate nature. Each place I visit teaches me something new about our culture, our history and our wonderful people.",
+        biographyText3: "My motivation is simple: to share the beauty of the places I pass through and show it to those who follow me. I believe that travel makes us better people: more empathetic and aware of the world around us.",
+        biographyText4: "",
+        biographyText5: "",
+        biographyText6: "",
+        biographyQuote: "\"Traveling is not just seeing new places, it is seeing the world from another perspective\"",
+        sharonTitle: "My Travel Companion: Shadow",
+        sharonText1: "Shadow is my faithful travel companion, a beautiful dog who accompanies me on all my adventures. His infinite energy and curiosity make every trip even more special.",
+        sharonText2: "Together we have traveled rivers, mountains and beaches, creating unforgettable memories that we share with all our followers.",
+        verVideo: "Watch Video →",
+        verTodasAventuras: "View All Adventures on YouTube",
+        tabColombia: "Colombia",
+        tabMundo: "The World",
         suggestionsTitle: "Message for the next video",
         suggestionsDescription: "We'll take it into account for the next video, we'll mention you and send greetings",
         suggestionsText: "If you have a suggestion, a place you'd like me to visit, or you just want to appear in one of my next videos, let me know! I'd love to include your ideas in my adventures through Colombia and the world.",
@@ -65,7 +99,34 @@ const translations = {
         navAdventures: "Adventures",
         navVideos: "Videos",
         navBiography: "Biography",
-        navSuggestions: "Suggestions"
+        navSuggestions: "Suggestions",
+        categoryColombia: "Colombia",
+        aventuras: [
+            {
+                title: "Pamplona, Norte de Santander | History, tradition and unforgettable views",
+                description: "Exploring the beautiful city of Pamplona and its surroundings in Norte de Santander."
+            },
+            {
+                title: "Curití, Santander | The artisan town that captivates",
+                description: "An unforgettable adventure through the majestic Chingaza National Natural Park."
+            },
+            {
+                title: "Salazar de las Palmas Fairs | Tradition, celebration and living culture",
+                description: "Exploring the history and culture of beautiful Cartagena de Indias."
+            },
+            {
+                title: "San Gil, Santander | Adventure, smiles and tourist heart",
+                description: "Journey to the heart of the Colombian coffee region, home of the wax palms."
+            },
+            {
+                title: "El Socorro, Santander | Colonial history and Santander essence",
+                description: "Discovering the world of Colombian coffee, from farms to cup."
+            },
+            {
+                title: "Cúcuta, Norte de Santander | Border, culture and urban life",
+                description: "The mythical Lost City of the Tayrona, a journey to the heart of the Sierra Nevada."
+            }
+        ]
     }
 };
 
@@ -486,13 +547,73 @@ function initLanguageSelector() {
         // Adventures section
         const adventuresTitle = document.querySelector('#aventuras .section-title');
         const adventuresDesc = document.querySelector('#aventuras .section-description');
+        const verVideoLinks = document.querySelectorAll('.aventura-link');
+        const verTodasButton = document.querySelector('.ver-mas-button');
 
         if (adventuresTitle) adventuresTitle.textContent = trans.adventuresTitle;
         if (adventuresDesc) adventuresDesc.textContent = trans.adventuresDescription;
+        if (verVideoLinks.length > 0) {
+            verVideoLinks.forEach(link => {
+                link.textContent = trans.verVideo;
+            });
+        }
+        if (verTodasButton) {
+            const buttonText = verTodasButton.textContent.trim();
+            if (buttonText.includes('Ver Todas') || buttonText.includes('View All')) {
+                verTodasButton.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4-5h-2V7h2v5zm4-3h-2V7h2v2zm2 9h-2v-7h2v7z"/>
+                    </svg>
+                    ${trans.verTodasAventuras}
+                `;
+            }
+        }
+
+        // Adventure cards translation
+        const aventuraCards = document.querySelectorAll('.aventura-card');
+        const aventuraCategories = document.querySelectorAll('.aventura-category');
+        const aventuraTitles = document.querySelectorAll('.aventura-title');
+        const aventuraDescriptions = document.querySelectorAll('.aventura-description');
+
+        // Translate categories
+        if (aventuraCategories.length > 0) {
+            aventuraCategories.forEach(category => {
+                if (category.textContent.trim() === 'Colombia') {
+                    category.textContent = trans.categoryColombia;
+                }
+            });
+        }
+
+        // Translate titles and descriptions
+        if (trans.aventuras && trans.aventuras.length > 0) {
+            aventuraTitles.forEach((title, index) => {
+                if (trans.aventuras[index]) {
+                    title.textContent = trans.aventuras[index].title;
+                }
+            });
+
+            aventuraDescriptions.forEach((desc, index) => {
+                if (trans.aventuras[index]) {
+                    desc.textContent = trans.aventuras[index].description;
+                }
+            });
+        }
 
         // Videos section
         const videosTitle = document.querySelector('#videos .section-title');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        
         if (videosTitle) videosTitle.textContent = trans.videosTitle;
+        if (tabButtons.length >= 2) {
+            tabButtons.forEach(button => {
+                const tabValue = button.getAttribute('data-tab');
+                if (tabValue === 'colombia') {
+                    button.textContent = trans.tabColombia;
+                } else if (tabValue === 'mundo') {
+                    button.textContent = trans.tabMundo;
+                }
+            });
+        }
 
         // Biography section
         const bioTitle = document.querySelector('#biografia .section-title');
@@ -500,13 +621,10 @@ function initLanguageSelector() {
         const bioQuote = document.querySelector('.biografia-quote');
 
         if (bioTitle) bioTitle.textContent = trans.biographyTitle;
-        if (bioTexts.length >= 6) {
+        if (bioTexts.length >= 3) {
             bioTexts[0].textContent = trans.biographyText1;
             bioTexts[1].textContent = trans.biographyText2;
             bioTexts[2].textContent = trans.biographyText3;
-            bioTexts[3].textContent = trans.biographyText4;
-            bioTexts[4].textContent = trans.biographyText5;
-            bioTexts[5].textContent = trans.biographyText6;
         }
         if (bioQuote) bioQuote.textContent = trans.biographyQuote;
 

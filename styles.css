@@ -28,6 +28,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
+    padding-top: 80px; /* Espacio para el header fijo */
 }
 
 /* Header y Navegación */
@@ -48,12 +49,16 @@ body {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 .nav-logo {
@@ -69,6 +74,9 @@ body {
     font-weight: 700;
     color: var(--primary-color);
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-toggle {
@@ -135,6 +143,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .language-dropdown {
@@ -198,7 +207,8 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: calc(100vh - 80px);
+    margin-top: -80px; /* Compensa el padding-top del body */
     background-image: linear-gradient(rgba(45, 90, 61, 0.7), rgba(139, 115, 85, 0.7)),
                       url('https://i.ytimg.com/vi/kclNKCtoYOs/hqdefault.jpg');
     background-size: cover;
@@ -265,6 +275,7 @@ body {
 /* Secciones Generales */
 section {
     padding: 5rem 0;
+    scroll-margin-top: 80px; /* Espacio para el scroll suave con header fijo */
 }
 
 .section-title {
@@ -904,9 +915,24 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .nav {
+        gap: 0.5rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-brand h1 {
+        font-size: 1.3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav {
         padding: 0.8rem 1rem;
+        gap: 0.5rem;
     }
 
     .nav-brand {
@@ -990,8 +1016,17 @@ section {
     }
 
     .hero {
-        height: 70vh;
+        height: calc(70vh - 80px);
+        margin-top: -80px;
         background-attachment: scroll;
+    }
+    
+    body {
+        padding-top: 70px; /* Menos espacio en móvil */
+    }
+    
+    section {
+        scroll-margin-top: 70px;
     }
 
     .hero-content {
